@@ -1,0 +1,22 @@
+provider "aws" {
+    region = "us-east-1"   
+    access_key = "*************"
+    secret_key = "*******************"
+  
+}
+/* shit+option+a */
+
+
+resource "aws_instance" "server-name" {
+    ami = "ami-0dc2d3e4c0bd18"
+    count = 1
+    #availability_zone = "us-west-2a"
+    key_name = "may14"
+    #subnet_id = ""
+    #security_groups =  [ "launch-wizard-1" ]
+ 
+    tags = {
+    Name = "server-name"
+  }
+ 
+}
